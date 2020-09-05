@@ -2,11 +2,11 @@
 
 function university_post_types(){
 	register_post_type('event', array(
-		'show_in_rest' => true,
-		'supports' => array('title', 'editor', 'excerpt'), // excerpt field. Use of modern editor screen
-		'rewrite' => array('slug' => 'events'),
-		'has_archive' => true,
+		'show_in_rest' => true, // To use of modern editor mode
+		'supports' => array('title', 'editor', 'excerpt'), // excerpt field
+		'rewrite' => array('slug' => 'events'), // change archive event posts URL for events
 		'public' => true,
+		'has_archive' => true,
 		'labels' => array(
             'name' => 'Events',
             'add_new_item' => 'Add New Event',

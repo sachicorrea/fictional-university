@@ -23,7 +23,7 @@
         <span class="event-summary__month">
         <?php $date_string = get_field('event_date');
           $date = DateTime::createFromFormat('d/m/Y', $date_string);
-            echo $date->format('M');
+          echo $date->format('M');
         ?></span>
         
         <span class="event-summary__day">

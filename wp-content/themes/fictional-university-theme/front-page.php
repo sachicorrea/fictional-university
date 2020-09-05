@@ -22,15 +22,15 @@
             $homepageEvents = new WP_Query(array(
               'posts_per_page' => 2,
               'post_type' => 'event',
-              'meta_key' => 'event_date',
-              'orderby' => 'meta_value_num',
+              'meta_key' => 'event_date', // Metakey to select the custom field event_date
+              'orderby' => 'meta_value_num', // Metadata to order values
               'order' => 'ASC',
-              'meta_query' => array(
-                array(
+              'meta_query' => array( //A meta query array to check multiple conditions
+                array( // Array to order events greater than or equal to today. Just one condition
                   'key' => 'event_date',
                   'compare' => '>=',
                   'value' => $today,
-                  'type' => 'numeric'
+                  'type' => 'numeric' //To define the type of value to bring
                 )
               )
             ));
@@ -63,7 +63,7 @@
                     } else {
                       echo wp_trim_words(get_the_content(), 18);
                     } ?>
-                      <a href="<?php the_permalink(); ?>" class="nu gray">Read more</a>
+                      <a href="<?php the_permalink(); ?>" class="nu gray">Learn    more</a>
                   </p>
                 </div>
               </div>
