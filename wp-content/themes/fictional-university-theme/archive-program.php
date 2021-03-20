@@ -7,7 +7,7 @@
         <div class="page-banner__content container container--narrow">
             <h1 class="page-banner__title">All Programs</h1>
             <div class="page-banner__intro">
-            <p>There is something for everyone. Have a look around.<p>
+                <p>There is something for everyone. Have a look around.<p>
             </div>
         </div>  
     </div>
@@ -17,11 +17,11 @@
     <ul class="link-list min-list">
         <?php 
         while(have_posts()) {
-            the_post(); ?>
+        the_post(); ?>
             <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-        <?php }
-
-            echo paginate_links();
+            
+            <?php }
+                echo paginate_links();
         ?>
     </ul>
 </div>
