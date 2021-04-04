@@ -1,5 +1,4 @@
-<?php 
-
+<?php
 	get_header();
 	
 	while(have_posts()) {
@@ -49,17 +48,17 @@
 						
 						echo '<ul class="professor-cards">';
 						
-							while($RelatedProfessors -> have_posts()) : 
-								$RelatedProfessors -> the_post(); 
+						while($RelatedProfessors -> have_posts()) : 
+							$RelatedProfessors -> the_post(); 
 				?>					
-								<li class="professor-card__list-item">
-									<a class="professor-card" href="<?php the_permalink(); ?>">
-										<img class="professor-card__image" src="<?php the_post_thumbnail_url('professorLandscape'); ?>">
-										
-										<span class="professor-card__name"><?php the_title(); ?></span>
-									</a>
-								</li>		
-							<?php endwhile;
+							<li class="professor-card__list-item">
+								<a class="professor-card" href="<?php the_permalink(); ?>">
+									<img class="professor-card__image" src="<?php the_post_thumbnail_url('professorLandscape'); ?>">
+									
+									<span class="professor-card__name"><?php the_title(); ?></span>
+								</a>
+							</li>		
+						<?php endwhile;
 						echo '</ul>';
 					}
 
